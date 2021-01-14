@@ -4,17 +4,17 @@
 
 let vArr = [1,1,1,1,1];
 let vTempitem=vArr[0];
-let vItogTrue;
-let vItogFalse;
+let isEqual = true;
 
-vArr.forEach(function(item,index,array){
-  if(array[index]==vTempitem)
-    vItogTrue=true;
-  else
-    vItogFalse=false;
+vArr.forEach(function(item){
+  if(item !== vTempitem)
+  isEqual=false;
 })
 
-if(vItogFalse===false)
-console.log(vItogFalse);
+if(isEqual)
+console.log(true);
 else
-console.log(vItogTrue);
+console.log(false);
+
+// В решении есть неточность: при сравнении элементов не учитывается тип значения, т.е. например для такого массива: [1,1,"1",1,1] будет выведен результат, что все элементы в нем одинаковые, что не соответствует действительности. Чтобы избежать этого, нужно использовать строгое сравнение (=== вместо ==), тогда при сравнении учитывается не только значение элемента, но и его тип
+// Также решение можно оптимизировать и использовать только 1 переменную-флаг вместо 2-х. В коде выше показала как

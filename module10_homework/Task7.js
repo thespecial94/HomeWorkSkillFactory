@@ -6,16 +6,17 @@ let vKolNeChet=0;
 let vKolZiro=0;
 let vKolOthers=0;
 
-vArr.forEach(function(item,index,array){
-if(typeof(item)=="number" && item!==0 && item!==isNaN && item!==undefined && item!==null)
-  {
-  if(item%2===0)
+vArr.forEach(function(item){
+if(typeof(item)=="number" && !isNaN(item))
+{
+  if(item === 0) {
+    vKolZiro++;
+  } else if (item % 2 === 0) {
     vKolChet++;
-  else
+  } else {
     vKolNeChet++; 
   }
-  else if(item===0)
-    vKolZiro++;
+}    
 else 
     vKolOthers++;
 })
@@ -24,3 +25,5 @@ else
   console.log("Количество нечетных элементов массива: " + vKolNeChet);
   console.log("Количество нулевых элементов массива: " + vKolZiro);
   console.log("Количество других элементов массива: " + vKolOthers);
+
+// Есть ошибка в проверке на NaN: значение нужно сравнивать не с функцией isNaN, а с её помощью: т.е. передавать значение в функцию isNaN в качестве параметра. Отдельные проверки на значения undefined и null не нужны, т.к. эти значения не имеют тип number и будут отсеяны на самой первой проверке на typeof
