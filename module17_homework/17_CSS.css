@@ -1,0 +1,682 @@
+/* undraw_team_spirit_hrr4 1 */
+
+.svg_pic {
+  position: absolute;
+width: 397px;
+height: 300px;
+left: 522px;
+top: 170px;
+}
+
+
+/* О нас */
+.about_us {
+  position: absolute;
+width: 165px;
+height: 77px;
+left: 638px;
+top: 531px;
+ /* H1 Desktop */
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 64px;
+line-height: 120%;
+/* identical to box height, or 77px */
+text-align: center;
+ /* Black */
+color: #1B1B1B;
+}
+
+.main_text{
+  position: absolute;
+width: 925px;
+height: 105px;
+left: 258px;
+top: 638px;
+
+/* Text L */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 147.3%;
+/* or 35px */
+
+text-align: center;
+
+/* Black */
+
+color: #1B1B1B;
+}
+.top_main{
+  position: relative;
+width: 1440px;
+height: 2183px;
+
+background: #FFFFFF;
+}
+
+.section_contacts{
+position: absolute;
+width: 1440px;
+height: 341px;
+left: 0px;
+top: 823px;
+
+background: #F7F9FB;
+}
+
+.h2_contacts{
+position: absolute;
+width: 224px;
+height: 58px;
+left: 607px;
+top: 13px;
+
+/* H2 Desktop */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 120%;
+/* identical to box height, or 58px */
+text-align: center;
+/* Black */
+color: #1B1B1B;
+}
+
+.p_email{
+  /* Электронная почта */
+position: absolute;
+width: 264px;
+height: 21px;
+left: 387px;
+top: 104px;
+
+/* Text S */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 147.3%;
+/* identical to box height, or 21px */
+
+text-align: center;
+
+/* Gray 2 */
+
+color: #4F4F4F;
+}
+.p_email_value{
+  /* drive@skillfactory.com */
+position: absolute;
+width: 264px;
+height: 29px;
+left: 387px;
+top: 131px;
+
+/* Text M */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 147.3%;
+/* or 29px */
+
+text-align: center;
+
+color: #000000;
+}
+
+.p_phone{
+  /* Телефон */
+position: absolute;
+width: 264px;
+height: 21px;
+left: 789px;
+top: 104px;
+
+/* Text S */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 147.3%;
+/* identical to box height, or 21px */
+
+text-align: center;
+
+/* Gray 2 */
+
+color: #4F4F4F;
+}
+
+
+.p_phone_value{
+  /* +7 912 123-45-67 */
+position: absolute;
+width: 264px;
+height: 29px;
+left: 789px;
+top: 134px;
+
+/* Text M */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 147.3%;
+/* or 29px */
+
+text-align: center;
+
+color: #000000;
+}
+
+.cl_header,cl_main,section_about{
+  position: absolute;
+width: 1440px;
+height: 90px;
+left: 0px;
+top: 0px;
+}
+
+.link_about_us{
+/* О нас */
+position: absolute;
+width: 42px;
+height: 19px;
+right: 437px;
+top: 35px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+text-decoration: none;
+/* identical to box height */
+
+
+/* Black */
+
+color: #1B1B1B;
+}
+
+.link_conditions{
+  /* Условия */
+position: absolute;
+width: 64px;
+height: 19px;
+right: 343px;
+top: 35px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+text-decoration: none;
+/* identical to box height */
+
+/* Black */
+
+color: #1B1B1B;
+}
+
+.link_often_questions{
+  /* Частые вопросы */
+position: absolute;
+width: 127px;
+height: 19px;
+right: 186px;
+top: 35px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+text-decoration: none;
+/* identical to box height */
+/* Black */
+
+color: #1B1B1B;
+}
+
+.link_SkillDrive{
+  /* SkillDrive */
+position: absolute;
+width: 115px;
+height: 28px;
+left: 40px;
+top: 31px;
+
+font-family: Rubik;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+text-decoration: none;
+/* Black */
+
+color: #1B1B1B;
+}
+
+.btn_sign_in{
+  /* Button L */
+/* Auto Layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 12px 30px;
+
+position: absolute;
+width: 106px;
+height: 43px;
+right: 40px;
+top: 23px;
+
+border: 1px solid rgba(27, 27, 27, 0.4);
+box-sizing: border-box;
+border-radius: 6px;
+}
+
+.cl_footer{
+  position: absolute;
+width: 1440px;
+height: 124px;
+left: 0px;
+top: 2059px;
+
+background: #3F3D56;
+}
+
+.p_author{
+  /* © SkillDrive Inc. 2020 */
+position: absolute;
+width: 152px;
+height: 19px;
+right: 1248px;
+top: 40px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+color: #FFFFFF;
+
+opacity: 0.4;
+}
+
+
+.icon_vk{
+/* vk 1 */
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1276px;
+top: 40px;
+}
+
+.icon_facebook{
+/* facebook (1) 1 */  
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1368px;
+top: 40px;
+}
+
+.icon_instagram{
+/* instagram (1) 1 */
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1322px;
+top: 40px;
+}
+.h3_team{
+  /* Команда */
+position: absolute;
+width: 203px;
+height: 58px;
+left: 618px;
+top: 1244px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 120%;
+/* identical to box height, or 58px */
+
+text-align: center;
+
+/* Black */
+color: #1B1B1B;
+}
+
+.img_team_picture_2{
+  /* Ellipse 11 */
+position: absolute;
+width: 180px;
+height: 180px;
+left: 498px;
+top: 1678px;
+}
+.img_team_picture_1{
+  /* Ellipse 12 */
+position: absolute;
+width: 180px;
+height: 180px;
+left: 760px;
+top: 1678px;
+}
+.img_team_picture_3{
+ /* Ellipse 12 */
+position: absolute;
+width: 180px;
+height: 180px;
+left: 1021px;
+top: 1357px;
+}
+
+.img_team_picture_4{
+/* Ellipse 11 */
+position: absolute;
+width: 180px;
+height: 180px;
+left: 760px;
+top: 1357px;
+}
+
+.img_team_picture_5{
+  /* Ellipse 10 */
+position: absolute;
+width: 180px;
+height: 180px;
+left: 498px;
+top: 1357px;
+}
+
+.img_team_picture_6{
+  /* Ellipse 9 */
+position: absolute;
+width: 180px;
+height: 180px;
+left: 237px;
+top: 1357px;
+border-radius: 40px 10px;
+}
+
+.p_team_name_describe_1{
+  /* SMM */
+position: absolute;
+width: 196px;
+height: 21px;
+left: 752px;
+top: 1918px;
+
+/* Text S */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 147.3%;
+/* identical to box height, or 21px */
+
+text-align: center;
+
+/* Gray 3 */
+
+color: #828282;
+}
+.p_team_name_describe_2{
+/* Копирайтер */
+position: absolute;
+width: 196px;
+height: 21px;
+left: 490px;
+top: 1918px;
+
+/* Text S */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 147.3%;
+/* identical to box height, or 21px */
+
+text-align: center;
+
+/* Gray 3 */
+
+color: #828282;
+}
+.p_team_name_describe_3{
+  /* Дизайнер */
+position: absolute;
+width: 196px;
+height: 21px;
+left: 1013px;
+top: 1597px;
+
+/* Text S */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 147.3%;
+/* identical to box height, or 21px */
+
+text-align: center;
+
+/* Gray 3 */
+
+color: #828282;
+}
+
+.p_team_name_describe_4{
+  /* Backend-разработчик */
+position: absolute;
+width: 196px;
+height: 21px;
+left: 752px;
+top: 1597px;
+
+/* Text S */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 147.3%;
+/* identical to box height, or 21px */
+
+text-align: center;
+
+/* Gray 3 */
+
+color: #828282;
+}
+.p_team_name_describe_5{
+  /* Frontend-разработчик */
+position: absolute;
+width: 196px;
+height: 21px;
+left: 490px;
+top: 1597px;
+
+/* Text S */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 147.3%;
+/* identical to box height, or 21px */
+
+text-align: center;
+
+/* Gray 3 */
+
+color: #828282;
+}
+
+.p_team_name_describe_6{
+  /* СЕО */
+
+
+position: absolute;
+width: 196px;
+height: 21px;
+left: 229px;
+top: 1597px;
+
+/* Text S */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 147.3%;
+/* identical to box height, or 21px */
+
+text-align: center;
+
+/* Gray 3 */
+
+color: #828282;
+}
+.p_team_name_1{
+  /* Мария Стрелкова */
+position: absolute;
+width: 196px;
+height: 29px;
+left: 752px;
+top: 1881px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 147.3%;
+/* or 29px */
+
+text-align: center;
+
+color: #000000;
+}
+.p_team_name_2{
+/* Ирина Деева */
+position: absolute;
+width: 196px;
+height: 29px;
+left: 490px;
+top: 1881px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 147.3%;
+/* or 29px */
+
+text-align: center;
+
+color: #000000;
+}
+
+.p_team_name_3{
+/* Николай Морозов */
+position: absolute;
+width: 196px;
+height: 29px;
+left: 1013px;
+top: 1560px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 147.3%;
+/* or 29px */
+
+text-align: center;
+
+color: #000000;
+}
+
+
+.p_team_name_4{
+  /* Денис Ярцев */
+position: absolute;
+width: 196px;
+height: 29px;
+left: 752px;
+top: 1560px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 147.3%;
+/* or 29px */
+
+text-align: center;
+
+color: #000000;
+}
+
+.p_team_name_5{
+  /* Алексей Смирнов */
+position: absolute;
+width: 196px;
+height: 29px;
+left: 490px;
+top: 1560px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 147.3%;
+/* or 29px */
+
+text-align: center;
+
+color: #000000;
+}
+.p_team_name_6{
+  /* Иван Иванов */
+position: absolute;
+width: 196px;
+height: 29px;
+left: 229px;
+top: 1560px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 147.3%;
+/* or 29px */
+
+text-align: center;
+
+color: #000000;
+}
