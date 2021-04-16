@@ -1,0 +1,226 @@
+@import "variables";
+@import "normalize";
+@import "fonts";
+
+  /*mixin*/
+  @mixin breakpoint($point) {
+    @if $point == large {
+      @media screen and (min-width: 1200px) {
+        @content;
+      }
+    }
+    @else if $point == medium {
+      @media screen and (max-width: 1199px) {
+        @content;
+      }
+    }
+  }
+  .is-desktop {
+    @include breakpoint(medium) {
+      display: none!important;
+    }
+  }
+  
+  .is-mobile {
+    @include breakpoint(large) {
+      display: none!important;
+    }
+  }
+
+
+  .content__container {
+    margin: 0 auto;
+  
+    &.is-align-center {
+      text-align: center;
+    }
+    &.is-align-start {
+      text-align: start;
+    }
+  
+    @include breakpoint(large) {
+      width: 1026px;
+    }
+  
+    @include breakpoint(medium) {
+      width: 100%;
+    }
+  }
+
+  
+@include breakpoint(large) {
+  .body{
+    width: 1440px;
+  }
+}
+
+
+  
+/*Header*/
+
+.header{
+  display: flex;
+  padding: 23px 40px 105px;
+  justify-content: space-between;
+  align-items: center;
+  &-SkillDrive{
+          font-family: 'Rubik',sans-serif;
+  }
+  a{
+      text-decoration: none;
+      color: $black;
+  }
+  &-group{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+      &-nav{
+        font-family: 'Robotonormal',sans-serif;
+
+        &-mobile{
+          a{
+            cursor: pointer;
+          }
+        }
+        a+a{
+            margin-left: 30px;
+        }
+    }
+    &-btnsignin{
+      margin-left: 40px;
+      font-family: 'Robotonormal500',sans-serif;
+    }
+  }
+}
+
+/*Question content*/
+
+.question{
+  @include breakpoint(large){
+    padding-bottom: 120px;
+  }
+  @include breakpoint(medium){
+    padding-bottom: 50px;
+  }
+    &-often{
+        h1{
+          @include breakpoint(large){
+            padding-top: 60px;
+            font-size: 64px;
+            line-height: 42px;
+            }
+            font-family: 'Roboto',sans-serif;
+            @include breakpoint(medium) {
+              font-size: 32px;
+              line-height: 120%;
+              padding-top: 30px;
+            }
+        }
+        
+    }p{
+          @include breakpoint(medium) {
+            padding-bottom: 30px;
+            font-size: 14px;
+            padding: 0 40px;
+        }
+        @include breakpoint(large) {
+            padding-bottom: 40px;
+            font-size: 20px;
+            padding: 0 20px;
+        }
+            font-family: 'Robotonormal',sans-serif;
+        }
+    &-first,&-second,&-third,&-fourth,&-fifth,&-sixth{
+        display: flex;
+        @include breakpoint(medium) {
+          padding: 0 20px;
+        }
+        justify-content: space-between;
+        h2{
+          @include breakpoint(large) {
+            font-size: 20px;
+          }
+          @include breakpoint(medium) {
+            font-size: 16px;
+            width: 65%;
+          }
+          @include breakpoint(large) {
+            padding-left: 22px;
+          }
+          @include breakpoint(medium) {
+            padding-left: 20px;
+          }
+            font-family: 'Robotonormal',sans-serif;
+            font-style: normal;
+            font-weight: normal;
+        }
+        img{         
+          @include breakpoint(large) {
+            padding-right: 27px;
+          }
+          @include breakpoint(medium) {
+            padding-right: 5px;
+          }
+           cursor: pointer;
+        }
+        &.collapsible:hover {
+          background-color: rgba(97, 161, 153, 0.1);
+          cursor: url('..\img\Strelka.svg');
+        }
+    }
+    .content{
+      justify-content: start;
+      padding-left: 0 22px;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    /*&-first{
+        background: rgba(97, 161, 153, 0.1);
+    }*/
+
+    /*&-fourth{
+        background: rgba(97, 161, 153, 0.15);
+        h2{
+            color: $light_green;
+        }
+    }*/
+
+    &-first,&-fourth{
+        border-radius: 6px;
+    }
+}
+
+
+/*Footer*/
+
+.footer{
+  @include breakpoint(large) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(medium) {
+   
+  }
+    background:$darkpurple;
+    @include breakpoint(large) {
+      padding: 43px 53px;
+    }
+    @include breakpoint(medium) {
+      padding-left: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &-author{
+        color: $white;
+        opacity: 0.4;
+    }
+    &-icons{
+        margin: 18px 0;
+        a + a {
+            margin-left: 20px;
+          }
+    }
+    
+}
