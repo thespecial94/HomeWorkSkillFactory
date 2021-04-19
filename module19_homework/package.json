@@ -1,0 +1,19 @@
+{
+  "name": "module19_homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.32.10",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"sasstocss":"sass --watch src/scss/style.scss:src/css/style.css",
+	"sasstocssmain":"sass --watch src_main/scss/style.scss:src_main/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
