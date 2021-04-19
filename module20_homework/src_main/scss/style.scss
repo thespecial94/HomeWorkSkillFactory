@@ -1,0 +1,295 @@
+@import "variables";
+@import "normalize";
+@import "fonts";
+
+  /*mixin*/
+  @mixin breakpoint($point) {
+    @if $point == large {
+      @media screen and (min-width: 1200px) {
+        @content;
+      }
+    }
+    @else if $point == medium {
+      @media screen and (max-width: 1199px) {
+        @content;
+      }
+    }
+      @else if $point == small {
+        @media screen and (max-width: 600px) {
+          @content;
+        }
+    }
+  }
+  .is-desktop {
+    @include breakpoint(medium) {
+      display: none!important;
+    }
+  }
+  
+  .is-mobile {
+    @include breakpoint(large) {
+      display: none!important;
+    }
+  }
+
+
+  .content__container {
+    margin: 0 auto;
+  
+    &.is-align-center {
+      text-align: center;
+    }
+  
+    @include breakpoint(large) {
+      width: 980px;
+    }
+  
+    @include breakpoint(medium) {
+      width: 90%;
+    }
+  }
+
+/*Header*/
+
+@include breakpoint(large) {
+  .body{
+    width: 1440px;
+  }
+}
+
+@include breakpoint(medium) {
+  .body{
+    width: 100%;
+  }
+}
+
+
+
+.header{
+    display: flex;
+    @include breakpoint(medium) {
+      padding: 24px 25px 68px;
+    }
+    padding: 23px 40px 105px;
+    justify-content: space-between;
+    align-items: center;
+    &-SkillDrive{
+            font-family: 'Rubik',sans-serif;
+            text-decoration: none;
+            &:hover{
+              cursor: pointer;
+              color:cornflowerblue;
+            }
+    }
+    @include breakpoint(large) {
+    a{
+        text-decoration: none;
+        color: $black;
+    }
+    &-group{
+      display: flex;
+      align-items: center;
+      justify-content: end;
+        &-nav{
+          font-family: 'Robotonormal',sans-serif;
+
+          &-mobile{
+            a{
+                cursor: pointer;               
+            }
+          }
+          a+a{
+              margin-left: 30px;
+          }
+          a{
+            &:hover{
+              cursor: pointer;
+              color:cornflowerblue;
+            }
+          }
+      }
+      &-btnsignin{
+        margin-left: 40px;
+        font-family: 'Robotonormal500',sans-serif;
+        &:hover{
+          cursor: pointer;
+          color:cornflowerblue;
+        }
+      }
+    }
+  }
+  
+}
+
+/*About content*/
+.about{
+  padding-bottom: 80px;
+  h1{
+    @include breakpoint(large) {
+    font-family: 'Robotobold',sans-serif;
+    font-size: 64px;
+    }
+    @include breakpoint(medium) {
+      font-family: 'Robotonormal500',sans-serif;
+      font-size: 32px;
+    }
+  }
+  p{
+    font-family: 'Robotonormal',sans-serif;
+    @include breakpoint(large) {
+      font-size: 24px;
+    }
+    @include breakpoint(medium) {
+      font-size: 16px;
+    }
+  }
+}
+/*Контакты*/
+.contacts{
+  @include breakpoint(large) {
+    padding-bottom: 80px;
+  }
+  @include breakpoint(medium) {
+    padding-bottom: 40px;
+  }
+  background-color: $light_grey;
+  h2{
+    @include breakpoint(large) {
+      padding-top: 80px;
+      font-size: 48px;
+    }
+    @include breakpoint(medium) {
+      padding-top: 40px;
+      font-size: 24px;
+    }
+    font-family: 'Robotonormal500',sans-serif;
+  }
+  &-group{
+    @include breakpoint(large) {
+      display: flex;
+      width: 45%;
+      justify-content: space-between;
+      margin-left: 255px;
+    }
+  
+    @include breakpoint(medium) {
+    }
+    .is-darkgrey{
+      color: $darkgrey;
+      @include breakpoint(large) {
+        font-size: 14px;
+      }
+    @include breakpoint(medium) {
+      font-size: 12px;
+    }
+    }
+    .is-black{
+      color: $black;
+      @include breakpoint(large) {
+        font-size: 20px;
+      }
+    @include breakpoint(medium) {
+      font-size: 14px;
+    }
+    }
+    &-border{
+      width: 1px;
+      height: 82px;
+      border-right: solid $grey1;
+    }
+  }
+}
+/*Команда*/
+.team{
+  padding-bottom: 80px;
+    h3{
+      font-family: 'Robotonormal500',sans-serif;
+      @include breakpoint(large) {
+        padding-top: 80px;
+        font-size: 48px;
+      }
+      @include breakpoint(medium) {
+        padding-top: 40px;
+        font-size: 24px;
+      }
+    }
+    &-group-image-first{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      &-item{
+        @include breakpoint(medium) {
+          width: 50%;
+          padding-bottom: 30px;
+        }
+        @include breakpoint(large) {
+          width: 25%;
+          padding-bottom: 60px;
+        }
+        align-items: center;
+      }
+    }
+    .is-black{
+       color: $black;
+       @include breakpoint(large) {
+        font-size: 20px;
+      }
+      @include breakpoint(medium) {
+        font-size: 16px;
+      }
+       font-weight: bold;
+       font-family: 'Robotonormal500',sans-serif;
+    }
+    .is-grey{
+      color: $grey;
+      font-family: 'Robotonormal',sans-serif;
+      @include breakpoint(large) {
+        font-size: 14px;
+      }
+      @include breakpoint(medium) {
+        font-size: 12px;
+      }
+    }
+}
+
+
+
+/*Footer*/
+
+.footer{
+  @include breakpoint(large) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(medium) {
+    .body{
+      width: 100%;
+    }    
+  }
+    background:$darkpurple;
+    @include breakpoint(large) {
+      padding: 43px 53px;
+    }
+    @include breakpoint(medium) {
+      padding-left: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &-author{
+        color: $white;
+        opacity: 0.4;
+    }
+    &-icons{
+        margin: 18px 0;
+        a + a {
+            margin-left: 20px;
+          }
+          a svg &-vk:hover,
+          a svg &-instagram:hover,
+          a svg &-facebook:hover{
+            cursor: pointer;
+            fill: aquamarine;
+          }
+    }
+}
