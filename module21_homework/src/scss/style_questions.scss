@@ -1,0 +1,276 @@
+@import "variables";
+@import "normalize";
+@import "fonts";
+
+  /*mixin*/
+  @mixin breakpoint($point) {
+    @if $point == large {
+      @media screen and (min-width: 1200px) {
+        @content;
+      }
+    }
+    @else if $point == medium {
+      @media screen and (max-width: 1199px) {
+        @content;
+      }
+    }
+  }
+  .is-desktop {
+    @include breakpoint(medium) {
+      display: none!important;
+    }
+  }
+  
+  .is-mobile {
+    @include breakpoint(large) {
+      display: none!important;
+    }
+  }
+
+
+  .content__container {
+    margin: 0 auto;
+  
+    &.is-align-center {
+      text-align: center;
+    }
+    &.is-align-start {
+      text-align: start;
+    }
+  
+    @include breakpoint(large) {
+      width: 1026px;
+    }
+  
+    @include breakpoint(medium) {
+      width: 100%;
+    }
+  }
+
+  
+@include breakpoint(large) {
+  .body{
+    width: 1440px;
+  }
+}
+@include breakpoint(medium) {
+  .body{
+    width: 100%;
+  }
+}
+
+  
+/*Header*/
+
+.header{
+  display: flex;
+  padding: 23px 40px 105px;
+  justify-content: space-between;
+  align-items: center;
+  &-SkillDrive{
+          font-family: 'Rubik',sans-serif;
+          &:hover{
+            cursor: pointer;
+            color:cornflowerblue;
+          }
+  }
+  a{
+      text-decoration: none;
+      color: $black;
+  }
+  &-group{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+      &-nav{
+        font-family: 'Robotonormal',sans-serif;
+
+        &-mobile{
+          a{
+            cursor: pointer;
+          }         
+        }
+        a{
+          &:hover{
+            cursor: pointer;
+            color:cornflowerblue;
+          }
+        }
+        a+a{
+            margin-left: 30px;
+        }
+    }
+    &-btnsignin{
+      margin-left: 40px;
+      font-family: 'Robotonormal500',sans-serif;
+      &:hover{
+        cursor: pointer;
+        color:cornflowerblue;
+      }
+    }
+  }
+}
+
+/*Question content*/
+
+.question{
+  @include breakpoint(large){
+    padding-bottom: 120px;
+  }
+  @include breakpoint(medium){
+    padding-bottom: 50px;
+    margin: 0 20px;
+  }
+    &-often{
+        h1{
+          @include breakpoint(large){
+            padding-top: 60px;
+            font-size: 64px;
+            line-height: 42px;
+            }
+            font-family: 'Roboto',sans-serif;
+            @include breakpoint(medium) {
+              font-size: 32px;
+              line-height: 120%;
+              padding-top: 30px;
+            }
+        }
+        p{
+          @include breakpoint(medium) {
+            font-size: 14px;
+            padding: 0 40px 30px;
+        }
+        @include breakpoint(large) {
+            font-size: 20px;
+            padding: 0px 20px 60px;
+        }
+            font-family: 'Robotonormal',sans-serif;
+        }
+        
+    }
+   
+    &-first,&-second,&-third,&-fourth,&-fifth,&-sixth{
+        display: flex;
+        border-radius: 6px;
+        margin: 15px 0;       
+        @include breakpoint(medium) {
+          padding: 0 20px;
+        }
+        justify-content: space-between;
+        h2{
+          @include breakpoint(large) {
+            font-size: 20px;
+          }
+          @include breakpoint(medium) {
+            font-size: 16px;
+            width: 65%;
+          }
+          @include breakpoint(large) {
+            padding-left: 22px;
+          }
+          @include breakpoint(medium) {
+            padding-left: 20px;
+          }
+            font-family: 'Robotonormal',sans-serif;
+            font-style: normal;
+            font-weight: normal;
+        }
+        svg{         
+          @include breakpoint(large) {
+            padding: 20px 27px;
+          }
+          @include breakpoint(medium) {
+            padding: 20px 20px;
+          }
+        }
+        &.collapsible{
+          cursor: pointer;
+          background: $lightgrey;
+          &.active
+          {
+          background-color: rgba(97, 161, 153, 0.15);
+          cursor: pointer;
+              h2{
+                color: $light_green;
+            }
+              svg {
+                transform: rotate(180deg); 
+                path{
+                  fill: $light_green;
+                }
+                @include breakpoint(large) {
+                  padding: 20px 27px;
+                }
+                @include breakpoint(medium) {
+                  padding: 20px 20px;
+                }
+              }
+            }
+        }      
+
+       &.collapsible:hover{
+        background-color: rgba(97, 161, 153, 0.1);
+       }
+    }
+     .content{
+      justify-content: start;
+      padding-left: 0 22px;
+      overflow: hidden;
+      display: none;
+      transition: max-height 0.2s ease-out;
+      p{
+        @include breakpoint(medium) {
+          font-size: 14px;
+          padding: 0px 40px;
+      }
+      @include breakpoint(large) {
+          font-size: 20px;
+          padding: 0px 20px;
+      }
+          font-family: 'Robotonormal',sans-serif;
+      }
+    }
+
+}
+
+
+/*Footer*/
+
+.footer{
+  @include breakpoint(large) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(medium) {
+    .body{
+      width: 100%;
+    }    
+  }
+    background:$darkpurple;
+    @include breakpoint(large) {
+      padding: 43px 53px;
+    }
+    @include breakpoint(medium) {
+      padding-left: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &-author{
+        color: $white;
+        opacity: 0.4;
+    }
+    &-icons{
+        margin: 18px 0;
+        a + a {
+            margin-left: 20px;
+          }
+          a svg &-vk:hover,
+          a svg &-instagram:hover,
+          a svg &-facebook:hover{
+            cursor: pointer;
+            fill: aquamarine;
+          }
+    }
+    
+}
