@@ -1,0 +1,42 @@
+/*Footer*/
+.footer {
+    background: #3F3D56;
+  }
+  @media screen and (min-width: 1200px) {
+    .footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .footer .body {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .footer {
+      padding: 43px 53px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .footer {
+      padding-left: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  .footer-author {
+    color: #FFFFFF;
+    opacity: 0.4;
+  }
+  .footer-icons {
+    margin: 18px 0;
+  }
+  .footer-icons a + a {
+    margin-left: 20px;
+  }
+  a svg .footer-icons-vk:hover, a svg .footer-icons-instagram:hover, a svg .footer-icons-facebook:hover {
+    cursor: pointer;
+    fill: aquamarine;
+  }
+  

@@ -1,0 +1,61 @@
+@media screen and (min-width: 1200px) {
+    .body {
+      width: 1440px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .body {
+      width: 100%;
+    }
+  }
+  .header {
+    display: flex;
+    padding: 23px 40px 105px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (max-width: 1199px) {
+    .header {
+      padding: 24px 25px 68px;
+    }
+  }
+  .header-SkillDrive {
+    font-family: "Rubik", sans-serif;
+    text-decoration: none;
+  }
+  .header-SkillDrive:hover {
+    cursor: pointer;
+    color: cornflowerblue;
+  }
+  @media screen and (min-width: 1200px) {
+    .header a {
+      text-decoration: none;
+      color: #1B1B1B;
+    }
+    .header-group {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+    .header-group-nav {
+      font-family: "Robotonormal", sans-serif;
+    }
+    .header-group-nav-mobile a {
+      cursor: pointer;
+    }
+    .header-group-nav a + a {
+      margin-left: 30px;
+    }
+    .header-group-nav a:hover {
+      cursor: pointer;
+      color: cornflowerblue;
+    }
+    .header-group-btnsignin {
+      margin-left: 40px;
+      font-family: "Robotonormal500", sans-serif;
+    }
+    .header-group-btnsignin:hover {
+      cursor: pointer;
+      color: cornflowerblue;
+    }
+  }

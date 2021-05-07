@@ -1,0 +1,68 @@
+/*Команда*/
+.team {
+    padding-bottom: 80px;
+  }
+  .team h3 {
+    font-family: "Robotonormal500", sans-serif;
+  }
+  @media screen and (min-width: 1200px) {
+    .team h3 {
+      padding-top: 80px;
+      font-size: 48px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .team h3 {
+      padding-top: 40px;
+      font-size: 24px;
+    }
+  }
+  .team-group-image-first {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .team-group-image-first-item {
+    align-items: center;
+  }
+  @media screen and (max-width: 1199px) {
+    .team-group-image-first-item {
+      width: 50%;
+      padding-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .team-group-image-first-item {
+      width: 25%;
+      padding-bottom: 60px;
+    }
+  }
+  .team .is-black {
+    color: #1B1B1B;
+    font-weight: bold;
+    font-family: "Robotonormal500", sans-serif;
+  }
+  @media screen and (min-width: 1200px) {
+    .team .is-black {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .team .is-black {
+      font-size: 16px;
+    }
+  }
+  .team .is-grey {
+    color: #828282;
+    font-family: "Robotonormal", sans-serif;
+  }
+  @media screen and (min-width: 1200px) {
+    .team .is-grey {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .team .is-grey {
+      font-size: 12px;
+    }
+  }

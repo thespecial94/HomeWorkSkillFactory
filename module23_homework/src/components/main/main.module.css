@@ -1,0 +1,29 @@
+/*mixin*/
+@media screen and (max-width: 1199px) {
+    .is-desktop {
+      display: none !important;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .is-mobile {
+      display: none !important;
+    }
+  }
+  
+.content__container {
+    margin: 0 auto;
+  }
+  .content__container.is-align-center {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    .content__container {
+      width: 980px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .content__container {
+      width: 90%;
+    }
+  }

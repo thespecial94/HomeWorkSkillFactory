@@ -1,0 +1,68 @@
+/*Контакты*/
+.contacts {
+    background-color: #F7F9FB;
+  }
+  @media screen and (min-width: 1200px) {
+    .contacts {
+      padding-bottom: 80px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .contacts {
+      padding-bottom: 40px;
+    }
+  }
+  .contacts h2 {
+    font-family: "Robotonormal500", sans-serif;
+  }
+  @media screen and (min-width: 1200px) {
+    .contacts h2 {
+      padding-top: 80px;
+      font-size: 48px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .contacts h2 {
+      padding-top: 40px;
+      font-size: 24px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .contacts-group {
+      display: flex;
+      width: 45%;
+      justify-content: space-between;
+      margin-left: 255px;
+    }
+  }
+  .contacts-group .is-darkgrey {
+    color: #4F4F4F;
+  }
+  @media screen and (min-width: 1200px) {
+    .contacts-group .is-darkgrey {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .contacts-group .is-darkgrey {
+      font-size: 12px;
+    }
+  }
+  .contacts-group .is-black {
+    color: #1B1B1B;
+  }
+  @media screen and (min-width: 1200px) {
+    .contacts-group .is-black {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .contacts-group .is-black {
+      font-size: 14px;
+    }
+  }
+  .contacts-group-border {
+    width: 1px;
+    height: 82px;
+    border-right: solid #C8C8CF;
+  }

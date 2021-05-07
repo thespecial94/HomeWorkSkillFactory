@@ -1,0 +1,144 @@
+/*Question content*/
+@media screen and (min-width: 1200px) {
+    .question {
+      padding-bottom: 120px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .question {
+      padding-bottom: 50px;
+      margin: 0 20px;
+    }
+  }
+  .question-often h1 {
+    font-family: "Roboto", sans-serif;
+  }
+  @media screen and (min-width: 1200px) {
+    .question-often h1 {
+      padding-top: 60px;
+      font-size: 64px;
+      line-height: 42px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .question-often h1 {
+      font-size: 32px;
+      line-height: 120%;
+      padding-top: 30px;
+    }
+  }
+  .question-often p {
+    font-family: "Robotonormal", sans-serif;
+  }
+  @media screen and (max-width: 1199px) {
+    .question-often p {
+      font-size: 14px;
+      padding: 0 40px 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .question-often p {
+      font-size: 20px;
+      padding: 0px 20px 60px;
+    }
+  }
+  .question-first, .question-second, .question-third, .question-fourth, .question-fifth, .question-sixth {
+    display: flex;
+    border-radius: 6px;
+    margin: 15px 0;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 1199px) {
+    .question-first, .question-second, .question-third, .question-fourth, .question-fifth, .question-sixth {
+      padding: 0 20px;
+    }
+  }
+  .question-first h2, .question-second h2, .question-third h2, .question-fourth h2, .question-fifth h2, .question-sixth h2 {
+    font-family: "Robotonormal", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+  }
+  @media screen and (min-width: 1200px) {
+    .question-first h2, .question-second h2, .question-third h2, .question-fourth h2, .question-fifth h2, .question-sixth h2 {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .question-first h2, .question-second h2, .question-third h2, .question-fourth h2, .question-fifth h2, .question-sixth h2 {
+      font-size: 16px;
+      width: 65%;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .question-first h2, .question-second h2, .question-third h2, .question-fourth h2, .question-fifth h2, .question-sixth h2 {
+      padding-left: 22px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .question-first h2, .question-second h2, .question-third h2, .question-fourth h2, .question-fifth h2, .question-sixth h2 {
+      padding-left: 20px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .question-first svg, .question-second svg, .question-third svg, .question-fourth svg, .question-fifth svg, .question-sixth svg {
+      padding: 20px 27px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .question-first svg, .question-second svg, .question-third svg, .question-fourth svg, .question-fifth svg, .question-sixth svg {
+      padding: 20px 20px;
+    }
+  }
+  .question-first.collapsible, .question-second.collapsible, .question-third.collapsible, .question-fourth.collapsible, .question-fifth.collapsible, .question-sixth.collapsible {
+    cursor: pointer;
+    background: #F7F7F8;
+  }
+  .question-first.collapsible.active, .question-second.collapsible.active, .question-third.collapsible.active, .question-fourth.collapsible.active, .question-fifth.collapsible.active, .question-sixth.collapsible.active {
+    background-color: rgba(97, 161, 153, 0.15);
+    cursor: pointer;
+  }
+  .question-first.collapsible.active h2, .question-second.collapsible.active h2, .question-third.collapsible.active h2, .question-fourth.collapsible.active h2, .question-fifth.collapsible.active h2, .question-sixth.collapsible.active h2 {
+    color: #61A199;
+  }
+  .question-first.collapsible.active svg, .question-second.collapsible.active svg, .question-third.collapsible.active svg, .question-fourth.collapsible.active svg, .question-fifth.collapsible.active svg, .question-sixth.collapsible.active svg {
+    transform: rotate(180deg);
+  }
+  .question-first.collapsible.active svg path, .question-second.collapsible.active svg path, .question-third.collapsible.active svg path, .question-fourth.collapsible.active svg path, .question-fifth.collapsible.active svg path, .question-sixth.collapsible.active svg path {
+    fill: #61A199;
+  }
+  @media screen and (min-width: 1200px) {
+    .question-first.collapsible.active svg, .question-second.collapsible.active svg, .question-third.collapsible.active svg, .question-fourth.collapsible.active svg, .question-fifth.collapsible.active svg, .question-sixth.collapsible.active svg {
+      padding: 20px 27px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .question-first.collapsible.active svg, .question-second.collapsible.active svg, .question-third.collapsible.active svg, .question-fourth.collapsible.active svg, .question-fifth.collapsible.active svg, .question-sixth.collapsible.active svg {
+      padding: 20px 20px;
+    }
+  }
+  .question-first.collapsible:hover, .question-second.collapsible:hover, .question-third.collapsible:hover, .question-fourth.collapsible:hover, .question-fifth.collapsible:hover, .question-sixth.collapsible:hover {
+    background-color: rgba(97, 161, 153, 0.1);
+  }
+  .question .content {
+    justify-content: start;
+    padding-left: 0 22px;
+    overflow: hidden;
+    display: none;
+    transition: max-height 0.2s ease-out;
+  }
+  .question .content p {
+    font-family: "Robotonormal", sans-serif;
+  }
+  @media screen and (max-width: 1199px) {
+    .question .content p {
+      font-size: 14px;
+      padding: 0px 40px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .question .content p {
+      font-size: 20px;
+      padding: 0px 20px;
+    }
+  }
+  
