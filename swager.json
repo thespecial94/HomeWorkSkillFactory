@@ -1,0 +1,134 @@
+openapi: 3.0.3
+info:
+  title: OnboardingKrmApp
+  description: Работа с заявкой 34 в пропортале
+  version: 0.0.1
+paths:
+  "/pro/onboarding/getConciergesCheckers": {
+    get: {
+      tags: [
+          "OnboardingKrmApp"
+      ],
+      summary: "Поиск Чекеров по заявке для клиента",
+      description: "Возвращает сотрудников с ролью 200 с навыком Чекер и данные по заявке",
+      operationId: "6c57d055a74b58a531ebf049efecb825",
+      parameters: [
+          {
+              name: "inn",
+              in: "query",
+              description: "ИНН клиента",
+              required: true,
+              allowEmptyValue: false,
+              schema: {
+                  type: "string"
+              },
+              example: 0275071662
+          },
+          {
+              name: "ogrn",
+              in: "query",
+              description: "ОГРН клиента",
+              required: false,
+              allowEmptyValue: true,
+              schema: {
+                  type: "string"
+              },
+              example: "310774618700642"
+          }
+      ],
+      responses: {
+        200: {
+          description: "Запрос отработал успешно и вернул результат",
+          content: {
+            application/json: {
+              schema: {
+                properties: {
+                  success: {
+                      type: "boolean",
+                      example: true
+                  },
+                  data: {
+                    type: "array",
+                    items: {},
+                    example: {
+                      language_independent_code: "KM Visit",
+                      tariff: "Один за всех и все на одного",
+                      payment_period: "Раз в месяц",
+                      checkers: [
+                        {
+                          fio: "фамилия имя отчество",
+                          surname: "фамилия",
+                          name: "имя",
+                          patronymic: "отчество",
+                          birth_date: "01.01.1971",
+                          doc_series: "1234",
+                          doc_number: "567890",
+                          doc_date_issue: "01.01.2012",
+                          department_code: "123-456"
+                        }
+                      ]
+                    }
+                  },
+                  error: {
+                      type: "string",
+                      example: 
+                  }
+                },
+                type: "object"
+              }
+            }
+          }
+        },
+        400: {
+          description: "Ошибка валидации данных",
+          content: {
+            application/json: {
+              schema: {
+                properties: {
+                  success: {
+                    type: "boolean",
+                    example: false
+                  },
+                  data: {
+                    type: "array",
+                    items: {},
+                    example: []
+                  },
+                  error: {
+                    type: "string",
+                    example: "Не заполнено ИНН"
+                  }
+                },
+                type: "object"
+              }
+            }
+          }
+        },
+        500: {
+          description: "Ошибка во время выполнения запроса",
+          content: {
+            application/json: {
+              schema: {
+                properties: {
+                  success: {
+                    type: "boolean",
+                    example: false
+                  },
+                  data: {
+                    type: "array",
+                    items: {},
+                    example: []
+                  },
+                  error: {
+                    type: "string",
+                    example: "Не найдена заявка для этого клиента"
+                  }
+                },
+                type: "object"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
