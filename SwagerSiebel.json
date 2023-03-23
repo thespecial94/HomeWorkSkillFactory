@@ -1,0 +1,228 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Обновление информации по курьерской доставке в Siebel(инициатор BCexpress)",
+    "version": "1.0",
+    "title": "Courier CallBack REST Service",
+    "contact": {
+      "email": "Magomed.Sultanakhmedov@rosbank.ru"
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "Basic Auth": {
+      "type": "basic"
+    }
+  },
+  "externalDocs": {
+    "description": "OpenAPI",
+    "url": "https://openapis.org"
+  },
+  "host": "rsbt-asthumfct.trosbank.trus.tsocgen:8443",
+  "basePath": "/siebel/v1.0",
+  "tags": [
+    {
+      "name": "service/RBDBOPROCourierCallBackRESTService/Post"
+    }
+  ],
+    "definitions": {
+        "service_RBDBOPROCourierCallBackRESTService_in_args": {
+            "type": "object",
+            "required": [
+                "body"
+            ],
+            "properties": {
+                "body": {
+                    "type": "object",
+                    "properties": {
+                        "eventName": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "eventName",
+                            "enum": [
+                            "meeting.created",
+                            "meeting.completed",
+                            "meeting.rescheduled",
+                            "meeting.address_changed",
+                            "order.recall_scheduled",
+                            "order.completed",
+                            "order.canceled",
+                            "meeting.assigned",
+                            "order.barcode"
+                            ],
+                            "description": "наименование события"
+                        },
+                        "eventTime": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "eventTime",
+                            "description": "время события"
+                        },
+                        "id": {
+                            "type": "number",
+                            "x-siebel-datatype": "Number",
+                            "title": "id",
+                            "description": "Id заявки"
+                        },
+                        "meetingId": {
+                            "type": "number",
+                            "x-siebel-datatype": "Number",
+                            "title": "meetingId",
+                            "description": "идентификатор встречи"
+                        },
+                        "meetingPlace": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "meetingPlace",
+                            "description": "место встречи"
+                        },
+                        "meetingTimeInterval": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "meetingTimeInterval",
+                            "description": "интервальное время встречи"
+                        },
+                        "scheduleDate": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "scheduleDate"
+                        },
+                        "courierName": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "courierName",
+                            "description": "имя курьера"
+                        },
+                        "startedAt": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "startedAt"
+                        },
+                        "cancelKind": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "cancelKind",
+                            "enum": [
+                              "canceled_by_phone_on_web",
+                              "canceled_by_partner_on_api",
+                              "canceled_on_place_on_mobile_app",
+                              "canceled_on_customer_unreachable",
+                              "canceled_by_phone_on_mobile_app",
+                              "canceled_on_verification"
+                            ],
+                            "description": "причина отмены встречи"
+                        },
+                        "cancelReason": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "cancelReason",
+                            "description": "причина отмены"
+                        },
+                        "newMeetingId": {
+                            "type": "number",
+                            "x-siebel-datatype": "Number",
+                            "title": "newMeetingId",
+                            "description": "новый индентификатор встречи"
+                        },
+                        "newAddress": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "newAddress",
+                            "description": "Новый адрес"
+                        },
+                        "barcode": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "barcode",
+                            "description": "Штрих-код"
+                        },
+                        "clientNumber": {
+                            "type": "string",
+                            "x-siebel-datatype": "String",
+                            "title": "clientNumber",
+                            "description": "Номер клиента"
+                        },
+                        "isExternal": {
+                            "type": "boolean",
+                            "x-siebel-datatype": "String",
+                            "title": "isExternal",
+                            "description": "признак, является ли штрихкод внешним"
+                        }
+                    }
+                }
+            }
+        },
+        "service_RBDBOPROCourierCallBackRESTService_out_args": {
+            "type": "object",
+            "properties": {
+                "Error Message": {
+                    "type": "string",
+                    "x-siebel-datatype": "String",
+                    "title": "Error Message"
+                }
+            }
+        }
+    },
+    "paths": {
+        "\/service\/RBDBOPROCourierCallBackRESTService\/Post": {
+            "post": {
+                "tags": [
+                    "service\/RBDBOPROCourierCallBackRESTService\/Post"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "service_RBDBOPROCourierCallBackRESTService_post",
+                "produces": [
+                    "application\/json"
+                ],
+                "consumes": [
+                    "application\/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation",
+                        "schema": {
+                            "$ref": "#\/definitions\/service_RBDBOPROCourierCallBackRESTService_out_args"
+                        }
+                    },
+                    "204": {
+                        "description": "No Resource Found"
+                    },
+                    "304": {
+                        "description": "Not Modified"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Access Forbidden"
+                    },
+                    "404": {
+                        "description": "Business service or method doesnt exist"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                },
+                "security": [
+                    {
+                        "Basic Auth": [],
+                        "OAuth 2.0": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#\/definitions\/service_RBDBOPROCourierCallBackRESTService_in_args"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
